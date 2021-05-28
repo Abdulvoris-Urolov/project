@@ -1,6 +1,6 @@
 const User = require(`../models/user`);
   
-module.signup = (req, res) => {
+exports.signup = (req, res) => {
     User.findOne({ email: req.body.email })
     .exec((error, user) => {
         if(user) return res.status(400).json({
