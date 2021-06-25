@@ -21,7 +21,7 @@ exports.addCategory =  (req, res) => {
     });
 }
 
-exports.getCategories = (req, res) => {
+exports.getCategories = (_req, res) => {
     Category.find({})
     .exec((error, categories) => {
         if(error) return res.status(400).json({ error });
